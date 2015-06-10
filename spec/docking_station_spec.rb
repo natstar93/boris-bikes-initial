@@ -30,7 +30,13 @@ describe DockingStation do
   	expect(subject.capacity).to eq DockingStation::DEFAULT_CAPACITY
   end
 
-  it {is_expected.to respond_to :increase_capacity}
+  it {is_expected.to respond_to(:increase_capacity).with(1).argument}  
+
+  describe 'increase_capacity' do
+    it 'increases capacity by 10' do
+      expect(subject.increase_capacity(10)).to eq 30
+    end
+  end
 
 end
 
