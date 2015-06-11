@@ -11,8 +11,7 @@ class DockingStation
   end
 
   def release_bike
-    fail 'No bikes available' if empty?
-    fail 'No working bikes available' if no_working_bikes?
+    fail 'No bikes available' if (empty? || no_working_bikes?)
     @bikes.delete_at(@bikes.index { |bike| bike.working? })
   end
 
