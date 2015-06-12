@@ -20,9 +20,9 @@ class DockingStation
     @bikes << bike
   end
 
-  def increase_capacity more_bikes
-    self.capacity += more_bikes
-  end
+ # def increase_capacity more_bikes
+  #  self.capacity += more_bikes
+ # end
 
 
 
